@@ -1,0 +1,63 @@
+.home-section{
+    /* padding-top: 100px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+        url('https://mir-s3-cdn-cf.behance.net/project_modules/fs/bf72b242408971.57cc882192e29.gif');
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    object-fit: contain;
+    
+    /* position: relative; */
+}
+
+.search_results{
+    background-color: #03034966;
+    width: 490px;
+    border-radius: 7px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.search_results p a{
+    color: white;
+    padding: 5px 3px;
+    display: block;
+    border-radius: 3px;
+}
+
+.search_results p a:hover{
+    
+    background-color: rgb(59, 138, 207);
+    /* padding: 5px 3px; */
+}
+
+.home-section input{
+    width: 400px;
+    padding: 15px  0px 15px 10px;
+    border-radius: 5px 0px 0px 5px;
+    outline: none;
+    border: none;
+    margin-top: 50px;
+}
+
+.search{
+    display: inline-flex;
+    /* border: 1px solid rgb(3, 3, 73); */
+    border-radius: 7px;
+    
+}
+
+.home-section button{
+    padding: 15px 25px;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgb(3, 3, 73);
+    color: white;
+}

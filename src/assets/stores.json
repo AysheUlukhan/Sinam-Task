@@ -1,0 +1,320 @@
+{
+  "stores": [
+    {
+      "id": 1,
+      "storeName": "Bazar Store",
+      "img": "https://bazarstore.az/cdn/shop/files/Bazarstore.jpg?v=1683270964",
+      "products": [
+        {
+          "id": 1,
+          "productName": "Ananas",
+          "category": "Meyvə",
+          "price": 5.99,
+          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075"
+        },
+        {
+          "id": 2,
+          "productName": "Qarpız",
+          "category": "Meyvə",
+          "price": 0.49,
+          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752"
+        },
+        {
+          "id": 3,
+          "productName": "Yemiş",
+          "category": "Meyvə",
+          "price": 1.29,
+          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503"
+        },
+        {
+          "id": 4,
+          "productName": "Romaşka Xama",
+          "category": "Süd məhsulları",
+          "price": 1.29,
+          "img": "https://bazarstore.az/cdn/shop/products/30013261_1000x1000.jpg?v=1693553189"
+        },
+        {
+          "id": 5,
+          "productName": "Azərsüd Ayran 1 L",
+          "category": "Süd məhsulları",
+          "price": 1.99,
+          "img": "https://bazarstore.az/cdn/shop/products/10001494_1000x1000.jpg?v=1693550880"
+        },
+        {
+          "id": 6,
+          "productName": "Sütaş Qaymaq 200 ML",
+          "category": "Süd məhsulları",
+          "price": 2.42,
+          "img": "https://bazarstore.az/cdn/shop/files/926a468fc69b0d3b197268e1df034bcf_1000x1000.jpg?v=1702970948"
+        },
+        {
+          "id": 7,
+          "productName": "Yurdum Şor 400 Q",
+          "category": "Süd məhsulları",
+          "price": 2.05,
+          "img": "https://bazarstore.az/cdn/shop/products/1c43789d8d8148eda4a02320e234a090_1000x1000.jpg?v=1693819459"
+        },
+        {
+          "id": 8,
+          "productName": "Sirab Su 1 L Qazlı",
+          "category": "İçkilər",
+          "price": 0.85,
+          "img": "https://bazarstore.az/cdn/shop/products/30010096_1000x1000.jpg?v=1693894996"
+        },
+        {
+          "id": 9,
+          "productName": "Bonagua Su 2 L Qazsız",
+          "category": "İçkilər",
+          "price": 1.00,
+          "img": "https://bazarstore.az/cdn/shop/products/30009496_1000x1000.jpg?v=1693743035"
+        },
+        {
+          "id": 41,
+          "productName": "Pepsi Cola 200 ML Şüşə",
+          "category": "İçkilər",
+          "price": 1.20,
+          "img": "https://cdn.shopify.com/s/files/1/0748/2395/8833/files/11d0b5ec9d07ceaf142da743ff30aba7_1000x1000.jpg?v=1694520487"
+        },
+        {
+          "id": 10,
+          "productName": "Sun Bakery Türk Paxlavası Şokoladı KQ",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 16.50,
+          "img": "https://bazarstore.az/cdn/shop/products/30181883_1000x1000.jpg?v=1693359667"
+        },
+        {
+          "id": 11,
+          "productName": "Sun Bakery Simit Çörək",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 1.40,
+          "img": "https://bazarstore.az/cdn/shop/products/63af0b330cb24a00a6da912ba9f46dba_ed76098d-a334-461c-b19b-92bd63edcda8_1000x1000.jpg?v=1693731472"
+        },
+        {
+          "id": 42,
+          "productName": "İvanovka Pəhriz Çörəyi 400 Q",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 2.30,
+          "img": "https://cdn.shopify.com/s/files/1/0748/2395/8833/products/30161930_be17d767-8159-4ea0-a32c-0d77330f1d9e_1000x1000.jpg?v=1693351705"
+        },
+        {
+          "id": 12,
+          "productName": "Sun Bakery Tort Smiling 1 Ədəd",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 14.99,
+          "img": "https://bazarstore.az/cdn/shop/products/30171943_1000x1000.png?v=1693597421"
+        }
+
+      ]
+    },
+    {
+      "id": 2,
+      "storeName": "Araz",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/0/02/Arazlogo2023.jpg",
+      "products": [
+        {
+          "id": 13,
+          "productName": "Ananas",
+          "category": "Meyvə",
+          "price": 6.15,
+          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075"
+        },
+        {
+          "id": 14,
+          "productName": "Qarpız",
+          "category": "Meyvə",
+          "price": 0.25,
+          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752"
+        },
+        {
+          "id": 15,
+          "productName": "Yemiş",
+          "category": "Meyvə",
+          "price": 0.99,
+          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503"
+        },
+        {
+          "id": 16,
+          "productName": "Romaşka Xama",
+          "category": "Süd məhsulları",
+          "price": 1.39,
+          "img": "https://bazarstore.az/cdn/shop/products/30013261_1000x1000.jpg?v=1693553189"
+        },
+        {
+          "id": 17,
+          "productName": "Azərsüd Ayran 1 L",
+          "category": "Süd məhsulları",
+          "price": 0.99,
+          "img": "https://bazarstore.az/cdn/shop/products/10001494_1000x1000.jpg?v=1693550880"
+        },
+        {
+          "id": 18,
+          "productName": "Sütaş Qaymaq 200 ML",
+          "category": "Süd məhsulları",
+          "price": 1.89,
+          "img": "https://bazarstore.az/cdn/shop/files/926a468fc69b0d3b197268e1df034bcf_1000x1000.jpg?v=1702970948"
+        },
+        {
+          "id": 19,
+          "productName": "Yurdum Şor 400 Q",
+          "category": "Süd məhsulları",
+          "price": 2.55,
+          "img": "https://bazarstore.az/cdn/shop/products/1c43789d8d8148eda4a02320e234a090_1000x1000.jpg?v=1693819459"
+        },
+        {
+          "id": 20,
+          "productName": "Sirab Su 1 L Qazlı",
+          "category": "İçkilər",
+          "price": 0.70,
+          "img": "https://bazarstore.az/cdn/shop/products/30010096_1000x1000.jpg?v=1693894996"
+        },
+        {
+          "id": 21,
+          "productName": "Bonagua Su 2 L Qazsız",
+          "category": "İçkilər",
+          "price": 0.75,
+          "img": "https://bazarstore.az/cdn/shop/products/30009496_1000x1000.jpg?v=1693743035"
+        },
+        {
+          "id": 22,
+          "productName": "Pepsi Cola 200 ML Şüşə",
+          "category": "İçkilər",
+          "price": 1.40,
+          "img": "https://cdn.shopify.com/s/files/1/0748/2395/8833/files/11d0b5ec9d07ceaf142da743ff30aba7_1000x1000.jpg?v=1694520487"
+        },
+        {
+          "id": 23,
+          "productName": "Sun Bakery Türk Paxlavası Şokoladı KQ",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 15.90,
+          "img": "https://bazarstore.az/cdn/shop/products/30181883_1000x1000.jpg?v=1693359667"
+        },
+        {
+          "id": 24,
+          "productName": "Sun Bakery Simit Çörək",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 2.60,
+          "img": "https://bazarstore.az/cdn/shop/products/63af0b330cb24a00a6da912ba9f46dba_ed76098d-a334-461c-b19b-92bd63edcda8_1000x1000.jpg?v=1693731472"
+        },
+        {
+          "id": 25,
+          "productName": "İvanovka Pəhriz Çörəyi 400 Q",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 3.50,
+          "img": "https://cdn.shopify.com/s/files/1/0748/2395/8833/products/30161930_be17d767-8159-4ea0-a32c-0d77330f1d9e_1000x1000.jpg?v=1693351705"
+        },
+        {
+          "id": 26,
+          "productName": "Sun Bakery Tort Smiling 1 Ədəd",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 16.70,
+          "img": "https://bazarstore.az/cdn/shop/products/30171943_1000x1000.png?v=1693597421"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "storeName": "Bravo",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/3/3d/%D0%9B%D0%BE%D0%B3%D0%BE_Bravo_supermarket.jpg",
+      "products": [
+        {
+          "id": 27,
+          "productName": "Ananas",
+          "category": "Meyvə",
+          "price": 4.45,
+          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075"
+        },
+        {
+          "id": 28,
+          "productName": "Qarpız",
+          "category": "Meyvə",
+          "price": 0.35,
+          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752"
+        },
+        {
+          "id": 29,
+          "productName": "Yemiş",
+          "category": "Meyvə",
+          "price": 0.85,
+          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503"
+        },
+        {
+          "id": 30,
+          "productName": "Romaşka Xama",
+          "category": "Süd məhsulları",
+          "price": 1.15,
+          "img": "https://bazarstore.az/cdn/shop/products/30013261_1000x1000.jpg?v=1693553189"
+        },
+        {
+          "id": 31,
+          "productName": "Azərsüd Ayran 1 L",
+          "category": "Süd məhsulları",
+          "price": 1.20,
+          "img": "https://bazarstore.az/cdn/shop/products/10001494_1000x1000.jpg?v=1693550880"
+        },
+        {
+          "id": 32,
+          "productName": "Sütaş Qaymaq 200 ML",
+          "category": "Süd məhsulları",
+          "price": 2.10,
+          "img": "https://bazarstore.az/cdn/shop/files/926a468fc69b0d3b197268e1df034bcf_1000x1000.jpg?v=1702970948"
+        },
+        {
+          "id": 33,
+          "productName": "Yurdum Şor 400 Q",
+          "category": "Süd məhsulları",
+          "price": 1.89,
+          "img": "https://bazarstore.az/cdn/shop/products/1c43789d8d8148eda4a02320e234a090_1000x1000.jpg?v=1693819459"
+        },
+        {
+          "id": 34,
+          "productName": "Sirab Su 1 L Qazlı",
+          "category": "İçkilər",
+          "price": 1.15,
+          "img": "https://bazarstore.az/cdn/shop/products/30010096_1000x1000.jpg?v=1693894996"
+        },
+        {
+          "id": 35,
+          "productName": "Bonagua Su 2 L Qazsız",
+          "category": "İçkilər",
+          "price": 1.15,
+          "img": "https://bazarstore.az/cdn/shop/products/30009496_1000x1000.jpg?v=1693743035"
+        },
+        {
+          "id": 36,
+          "productName": "Pepsi Cola 200 ML Şüşə",
+          "category": "İçkilər",
+          "price": 1.10,
+          "img": "https://cdn.shopify.com/s/files/1/0748/2395/8833/files/11d0b5ec9d07ceaf142da743ff30aba7_1000x1000.jpg?v=1694520487"
+        },
+        {
+          "id": 37,
+          "productName": "Sun Bakery Türk Paxlavası Şokoladı KQ",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 15.20,
+          "img": "https://bazarstore.az/cdn/shop/products/30181883_1000x1000.jpg?v=1693359667"
+        },
+        {
+          "id": 38,
+          "productName": "Sun Bakery Simit Çörək",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 0.99,
+          "img": "https://bazarstore.az/cdn/shop/products/63af0b330cb24a00a6da912ba9f46dba_ed76098d-a334-461c-b19b-92bd63edcda8_1000x1000.jpg?v=1693731472"
+        },
+        {
+          "id": 39,
+          "productName": "İvanovka Pəhriz Çörəyi 400 Q",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 1.40,
+          "img": "https://cdn.shopify.com/s/files/1/0748/2395/8833/products/30161930_be17d767-8159-4ea0-a32c-0d77330f1d9e_1000x1000.jpg?v=1693351705"
+        },
+        {
+          "id": 40,
+          "productName": "Sun Bakery Tort Smiling 1 Ədəd",
+          "category": "Tort, Bişmələr, Çörək",
+          "price": 18.70,
+          "img": "https://bazarstore.az/cdn/shop/products/30171943_1000x1000.png?v=1693597421"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+<div class="home-section">
+  <div class="">
+    <input type="text" [(ngModel)]="searchTerm" (keyup)="searchProducts()" placeholder="Məhsul adı axtarın" />
+    <button (click)="searchProducts()">Axtar</button>
+  </div>
+
+  <div class="search_results" *ngIf="searchResults.length > 0">
+    <div >search
+      <p class="mb-0" *ngFor="let product of searchResults">
+        <a [routerLink]="['/product-detail', product.id]">
+          {{ product.productName }} - {{ product.price }} ₼
+        </a>
+      </p>
+    </div>
+  </div>
+  <div *ngIf="searchResults.length === 0 && searchTerm.length > 0">
+    Məlumat tapılmadı
+  </div>
+</div>

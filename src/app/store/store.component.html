@@ -1,0 +1,14 @@
+<!-- store.component.html -->
+<div class="container margin_top_shop ">
+    <div class="row">
+      <div class="col-lg-4" *ngFor="let store of stores">
+        <a [routerLink]="['/store-detail', store.id]" class="card">
+          <img height="200" src={{store.img}} class="card-img-top object-fit-cover" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">{{ store.storeName }}</h6>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,41 @@
+.store-detail input{
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+
+.store-detail input::placeholder{
+    font-size: 14px;
+}
+
+.store-detail .search-wrapper{
+    display: flex;
+    border-radius: 5px;
+    border: 1px solid #DEE2E6;
+
+}
+
+.store-detail .search-wrapper button{
+    border: none;
+    font-size: 14px;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.store-detail ul li{
+    cursor: pointer;
+}
+
+.store-detail ul li:hover{
+    background-color: #F0F0F0;
+}
+
+.store-detail .card-body p{
+    font-size: 14px;
+}
+/* menim yazdigim kod */
+.margin_top_shop{
+    margin-top: 200px;
+}

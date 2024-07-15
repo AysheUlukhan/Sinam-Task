@@ -1,0 +1,18 @@
+<div class="container margin_top_shop" *ngIf="product">
+    <h4>{{ product.productName }}</h4>
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th><h6>Mağaza</h6></th>
+          <th><h6>Qiymət</h6></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of productPrices">
+          <td>{{ item.storeName }}</td>
+          <td>{{ item.price }} ₼</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
