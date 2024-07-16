@@ -1,3 +1,9 @@
-.margin_top_shop{
+.product-detail{
     margin-top: 200px;
+}
+
+.product-detail table tr th{
+    background-color: #030349;
+    color: white;
+    font-weight: 400;
 }

@@ -65,8 +65,8 @@ export class StoreService {
             store.products.splice(productIndex, 1);
           }
         }
-        observer.next();
-        observer.complete();
+          observer.next();
+          observer.complete();
       });
     });
   }

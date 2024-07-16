@@ -41,7 +41,6 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(['/login']);
   }
 
-  // Method to get store name by storeId
   getStoreName(storeId: number): string {
     const store = this.stores.find(s => s.id === storeId);
     return store ? store.storeName : 'Unknown Store';

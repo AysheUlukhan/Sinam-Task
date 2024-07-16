@@ -47,6 +47,10 @@
     margin-top: 50px;
 }
 
+.home-section input::placeholder{
+    font-size: 14px;
+}
+
 .search{
     display: inline-flex;
     /* border: 1px solid rgb(3, 3, 73); */
@@ -59,5 +63,9 @@
     border: none;
     border-radius: 0px 5px 5px 0px;
     background-color: rgb(3, 3, 73);
+    color: white;
+}
+
+.home-section .noproduct{
     color: white;
 }

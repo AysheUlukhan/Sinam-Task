@@ -5,7 +5,7 @@
   </div>
 
   <div class="search_results" *ngIf="searchResults.length > 0">
-    <div >search
+    <div >
       <p class="mb-0" *ngFor="let product of searchResults">
         <a [routerLink]="['/product-detail', product.id]">
           {{ product.productName }} - {{ product.price }} ₼
@@ -13,7 +13,7 @@
       </p>
     </div>
   </div>
-  <div *ngIf="searchResults.length === 0 && searchTerm.length > 0">
+  <div class="noproduct" *ngIf="searchResults.length === 0 && searchTerm.length > 0">
     Məlumat tapılmadı
   </div>
 </div>

@@ -1,4 +1,3 @@
-// login.component.ts
 
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -12,12 +11,12 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
 
   username: string;
-  password: string; // Burada password tipini string olaraq təyin edin
+  password: string; 
   error: string;
 
   constructor(private authService: AuthService, private router: Router) {
     this.username = '';
-    this.password = ''; // Default olaraq boş string təyin edin
+    this.password = ''; 
     this.error = '';
   }
 

@@ -1,5 +1,3 @@
-// auth.service.ts
-
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -13,7 +11,6 @@ export class AuthService {
   constructor() { }
 
   login(username: string, password: string): boolean {
-    // Kullanıcı adı ve şifre kontrolü burada yapılabilir
     if (username === 'admin' && password === '123') {
       this.loggedIn = true;
       this.username = username;

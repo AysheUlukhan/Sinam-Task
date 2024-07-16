@@ -4,7 +4,7 @@ export interface Product {
   category: string;
   price: number;
   img: string;
-  storeId: number; // Ensure this field exists
+  storeId: number; 
 }
 
 export interface Store {

@@ -23,14 +23,14 @@ export class HomeComponent implements OnInit {
 
   searchProducts(): void {
     this.searchResults = [];
-    const seenProductNames = new Set<string>(); // Görülmüş məhsul adlarını izləmək üçün Set
+    const seenProductNames = new Set<string>(); 
 
     if (this.searchTerm) {
       this.stores.forEach(store => {
         store.products.forEach(product => {
           if (product.productName.toLowerCase().includes(this.searchTerm.toLowerCase()) && !seenProductNames.has(product.productName)) {
             this.searchResults.push(product);
-            seenProductNames.add(product.productName); // Məhsul adını qeyd et
+            seenProductNames.add(product.productName);
           }
         });
       });

@@ -28,6 +28,8 @@
   color: rgb(0, 0, 0) ;
   border-radius: 20px;
   padding: 15px;
-  width: 60%;
-  border: 1px solid darkblue;
+  /* width: 60%; */
+  /* border: 1px solid #030349; */
+  /* background-color: #030349; */
+  box-shadow: rgba(2, 8, 110, 0.2) 0px 2px 8px 0px;
 }
