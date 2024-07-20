@@ -16,7 +16,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
-import { AddProductComponent } from './add-product/add-product.component'
+import { AddProductComponent } from './add-product/add-product.component';
+import { CartComponent } from './cart/cart.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { AddProductComponent } from './add-product/add-product.component'
     EditProductComponent,
     ProductsComponent,
     RegisterComponent,
-    AddProductComponent
+    AddProductComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

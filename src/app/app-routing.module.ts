@@ -11,6 +11,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import { AddProductComponent } from './add-product/add-product.component';
+import { CartComponent } from './cart/cart.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductsComponent },
+  { path: 'cart', component: CartComponent },
   { path: '**', redirectTo: '/home' }
 ];
 

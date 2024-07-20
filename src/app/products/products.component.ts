@@ -48,4 +48,24 @@ export class ProductsComponent implements OnInit {
       this.filteredProducts = this.selectedStore.products.filter(product => product.category === category);
     }
   }
+
+  addToCart(product: Product): void {
+    let cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
+    
+    // Məhsulu tap
+    const existingProduct = cartProducts.find((p: Product) => p.id === product.id);
+    
+    if (existingProduct) {
+      // Məhsul varsa, miqdarı artır
+      existingProduct.quantity = (existingProduct.quantity || 1) + 1;
+    } else {
+      // Məhsul yoxdursa, miqdarını təyin et və əlavə et
+      product.quantity = 1;
+      cartProducts.push(product);
+    }
+    
+    // Yenidən localStorage-a yaz
+    localStorage.setItem('cart', JSON.stringify(cartProducts));
+    alert(`${product.productName} added to cart.`);
+  }
 }

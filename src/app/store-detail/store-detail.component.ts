@@ -47,4 +47,21 @@ export class StoreDetailComponent implements OnInit {
       }
     }
   }
+
+  addToCart(product: Product): void {
+    let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const existingProduct = cart.find((p: Product) => p.id === product.id);
+
+    if (existingProduct) {
+      // Məhsul varsa, miqdarını artır
+      existingProduct.quantity = (existingProduct.quantity || 1) + 1;
+    } else {
+      // Məhsul yoxdursa, miqdarını təyin et və əlavə et
+      product.quantity = 1;
+      cart.push(product);
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${product.productName} added to cart.`);
+  }
 }
