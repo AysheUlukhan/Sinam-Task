@@ -1,0 +1,34 @@
+.products{
+    padding-top: 150px;
+}
+
+
+.store-card, .product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .store-card img, .product-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-card {
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+
+  .products ul li:hover{
+    background-color: #F0F0F0;
+  }
+
+
+  .active {
+    background-color: #F0F0F0;
+    color: black;
+    border-color: #F0F0F0;
+  }
+  

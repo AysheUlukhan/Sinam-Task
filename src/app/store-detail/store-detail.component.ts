@@ -13,6 +13,7 @@ export class StoreDetailComponent implements OnInit {
   categories: string[] = [];
   filteredProducts: Product[] = [];
   searchTerm: string = '';
+  selectedCategory: string = '';
 
   constructor(private route: ActivatedRoute, private storeService: StoreService) { }
 
@@ -28,12 +29,14 @@ export class StoreDetailComponent implements OnInit {
   }
 
   filterByCategory(category: string): void {
+    this.selectedCategory = category;
     if (this.store) {
       this.filteredProducts = this.store.products.filter((product: Product) => product.category === category);
     }
   }
 
   searchProducts(): void {
+    this.selectedCategory = ''; 
     if (this.store) {
       if (this.searchTerm.trim() === '') {
         this.filteredProducts = this.store.products;

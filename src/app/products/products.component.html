@@ -1,0 +1,37 @@
+<div class="products container">
+    <div class="row">
+        <div class="col-lg-3">
+            <ul class="list-group">
+                <li class="list-group-item"
+                    *ngFor="let store of stores"
+                    [ngClass]="{'active': store === selectedStore}"
+                    (click)="selectStore(store)">
+                    {{ store.storeName }}
+                </li>
+            </ul>
+
+            <ul class="list-group mt-5">
+                <li class="list-group-item"
+                    *ngFor="let category of categories"
+                    [ngClass]="{'active': category === selectedCategory}"
+                    (click)="filterProductsByCategory(category)">
+                    {{ category }}
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-9" *ngIf="selectedStore">
+            <div class="row">
+                <div class="col-lg-4" *ngFor="let product of filteredProducts">
+                    <div class="card mb-4">
+                        <img class="card-img-top object-fit-cover" height="250" [src]="product.img"
+                            alt="{{ product.productName }}">
+                        <div class="card-body">
+                            <h6 class="card-title">{{ product.productName }}</h6>
+                            <p class="card-text">{{ product.price | currency }} ₼</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

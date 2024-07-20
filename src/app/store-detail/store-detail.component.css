@@ -5,7 +5,12 @@
     border: none;
     padding-left: 10px;
 }
-
+.list-group-item.active {
+    background-color: #F0F0F0;
+    color: black;
+    border-color: #F0F0F0;
+  }
+  
 .store-detail input::placeholder{
     font-size: 14px;
 }

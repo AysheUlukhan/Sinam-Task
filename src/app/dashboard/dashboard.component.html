@@ -1,7 +1,6 @@
-<div class="container margin_top_shop">
+<!-- <div class="container margin_top_shop">
  <div class="d-flex justify-content-between mb-4">
   <h2 class="text-center">Dashboard</h2>
-  <button class="btn btn-danger" (click)="logout()">Logout</button>  
  </div> 
   <table class="table">
     <thead>
@@ -31,17 +30,58 @@
       </tr>
     </tbody>
   </table>
-  <div class="row justify-content-center mt-5">
-    <div class="col-md-6">
-      <div class="card">
-        <div class="card-header">
-          <h2 class="text-center">Dashboard</h2>
-        </div>
-        <div class="card-body">
-          <p>Welcome, {{ username }}!</p>
-          <button class="btn btn-danger" (click)="logout()">Logout</button>
-        </div>
-      </div>
-    </div>
+</div> -->
+
+
+<!-- dashboard.component.html -->
+<div class="container margin_top_shop">
+  <div class="d-flex justify-content-between mb-4">
+    <h2 class="text-center">Dashboard</h2>
+    <button (click)="navigateToAddProduct()" class="btn btn-primary">Add Product</button>
+
+  </div>
+  
+  <!-- List of stores -->
+  <div *ngIf="!selectedStoreId">
+    <h3>Stores</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let store of stores">
+        <a (click)="viewProducts(store.id)">{{ store.storeName }}</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Products for selected store -->
+  <div *ngIf="selectedStoreId">
+    <h3>Products for Store: {{ getStoreName(selectedStoreId) }}</h3>
+    <button (click)="selectedStoreId = null" class="btn btn-secondary mb-3">Back to Stores</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Mağaza adı</th>
+          <th scope="col">Şəkil</th>
+          <th scope="col">Məhsulun adı</th>
+          <th scope="col">Qiymət</th>
+          <th scope="col">Edit</th>
+          <th scope="col">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of products; let i = index">
+          <th scope="row">{{ i + 1 }}</th>
+          <td>{{ getStoreName(item.storeId) }}</td>
+          <td><img [src]="item.product.img" alt="{{ item.product.productName }}" height="50"></td>
+          <td>{{ item.product.productName }}</td>
+          <td>{{ item.product.price }} ₼</td>
+          <td>
+            <button class="btn btn-warning" (click)="editProduct(item.storeId, item.product.id)">Edit</button>
+          </td>
+          <td>
+            <button class="btn btn-dark" (click)="deleteProduct(item.storeId, item.product.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>

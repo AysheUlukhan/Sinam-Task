@@ -6,9 +6,11 @@
         <button>Search</button>
       </div>
       <ul class="list-group">
-        <li class="list-group-item" *ngFor="let category of categories" (click)="filterByCategory(category)">
+        <li class="list-group-item" *ngFor="let category of categories" (click)="filterByCategory(category)"
+          [ngClass]="{'active': selectedCategory === category}">
           {{ category }}
         </li>
+
       </ul>
     </div>
 

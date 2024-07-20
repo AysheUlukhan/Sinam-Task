@@ -1,18 +1,23 @@
 <div class="container product-detail" *ngIf="product">
-    <h4>{{ product.productName }}</h4>
-    <table class="table table-hover mt-3">
-      <thead>
-        <tr>
-          <th>Mağaza</th>
-          <th>Qiymət</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let item of productPrices">
-          <td>{{ item.storeName }}</td>
-          <td>{{ item.price }} ₼</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  
+  <h4>{{ product.productName }}</h4>
+  <table class="table table-hover mt-3">
+    <thead>
+      <tr>
+        <th>Şəkil</th>
+        <th>Məhsul</th>
+        <th>Mağaza</th>
+        <th>Qiymət</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of productPrices">
+        <td>
+          <img [src]="product?.img" alt="{{ product?.productName }}" class="img-thumbnail" width="100">
+        </td>
+        <td>{{ product?.productName }}</td>
+        <td>{{ item.storeName }}</td>
+        <td>{{ item.price }} ₼</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
