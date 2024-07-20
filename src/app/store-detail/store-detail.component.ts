@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StoreService } from '../store.service';
 import { Product, Store } from '../store.model';
+import { AuthService } from '../auth.service'; // Import AuthService
 
 @Component({
   selector: 'app-store-detail',
@@ -15,7 +16,11 @@ export class StoreDetailComponent implements OnInit {
   searchTerm: string = '';
   selectedCategory: string = '';
 
-  constructor(private route: ActivatedRoute, private storeService: StoreService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private storeService: StoreService,
+    private authService: AuthService // Inject AuthService
+  ) { }
 
   ngOnInit(): void {
     const storeId = this.route.snapshot.paramMap.get('id');
@@ -49,18 +54,24 @@ export class StoreDetailComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
+    if (!this.authService.isLoggedIn()) {
+      alert('Please log in first to add items to the cart.');
+      return;
+    }
+
     let cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const existingProduct = cart.find((p: Product) => p.id === product.id);
 
     if (existingProduct) {
-      // Məhsul varsa, miqdarını artır
+      // If the product exists, increase the quantity
       existingProduct.quantity = (existingProduct.quantity || 1) + 1;
     } else {
-      // Məhsul yoxdursa, miqdarını təyin et və əlavə et
+      // If the product does not exist, set quantity to 1 and add to cart
       product.quantity = 1;
       cart.push(product);
     }
 
+    // Update localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
     alert(`${product.productName} added to cart.`);
   }

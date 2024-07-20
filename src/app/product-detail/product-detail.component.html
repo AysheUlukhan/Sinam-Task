@@ -12,9 +12,9 @@
     <tbody>
       <tr *ngFor="let item of productPrices">
         <td>
-          <img [src]="product?.img" alt="{{ product?.productName }}" class="img-thumbnail" width="100">
+          <img [src]="product.img" alt="{{ product.productName }}" class="img-thumbnail" width="100">
         </td>
-        <td>{{ product?.productName }}</td>
+        <td>{{ product.productName }}</td>
         <td>{{ item.storeName }}</td>
         <td>{{ item.price }} ₼</td>
       </tr>

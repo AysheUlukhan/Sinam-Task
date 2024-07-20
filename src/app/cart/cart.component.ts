@@ -8,6 +8,7 @@ import { Product } from '../store.model';
 })
 export class CartComponent implements OnInit {
   cartProducts: Product[] = [];
+  totalPrice: number = 0; // Variable to hold total price
 
   ngOnInit(): void {
     this.loadCartProducts();
@@ -15,42 +16,42 @@ export class CartComponent implements OnInit {
 
   loadCartProducts(): void {
     this.cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
-
-    // Hər məhsul üçün başlanğıc miqdarını təyin edin
     this.cartProducts.forEach((product: Product) => {
       if (product.quantity === undefined) {
-        product.quantity = 1; // Əgər miqdar təyin edilməmişsə, 1 olaraq təyin edin
+        product.quantity = 1; // If quantity is not defined, set it to 1
       }
     });
+    this.calculateTotalPrice(); // Calculate total price initially
   }
 
   deleteProduct(productToDelete: Product): void {
-    // localStorage-dan məhsulu sil
     let cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
     cartProducts = cartProducts.filter((product: Product) => product.id !== productToDelete.id);
     localStorage.setItem('cart', JSON.stringify(cartProducts));
-
-    // Məhsul siyahısını yenilə
     this.cartProducts = cartProducts;
+    this.calculateTotalPrice(); // Recalculate total price after deletion
   }
 
   changeQuantity(product: Product, change: number): void {
-    // localStorage-dan məhsulun miqdarını artırıb-azalt
     let cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
     const productIndex = cartProducts.findIndex((p: Product) => p.id === product.id);
 
     if (productIndex > -1) {
       const currentQuantity = cartProducts[productIndex].quantity || 1;
       const newQuantity = currentQuantity + change;
-      
-      if (newQuantity > 0) { // Miqdar mənfi olmamalıdır
+
+      if (newQuantity > 0) { // Quantity should not be negative
         cartProducts[productIndex].quantity = newQuantity;
         localStorage.setItem('cart', JSON.stringify(cartProducts));
-
-        // Məhsul siyahısını yenilə
         this.cartProducts = cartProducts;
+        this.calculateTotalPrice(); // Recalculate total price after changing quantity
       }
     }
   }
+
+  calculateTotalPrice(): void {
+    this.totalPrice = this.cartProducts.reduce((total, product) => {
+      return total + (product.price * (product.quantity || 1));
+    }, 0);
+  }
 }
-  

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../store.service';
 import { Store, Product } from '../store.model';
+import { AuthService } from '../auth.service'; // Import AuthService
 
 @Component({
   selector: 'app-products',
@@ -12,15 +13,15 @@ export class ProductsComponent implements OnInit {
   selectedStore: Store | null = null;
   categories: string[] = [];
   filteredProducts: Product[] = [];
-  selectedCategory: string | null = null; // Seçilən kateqoriyanı saxlamaq üçün
+  selectedCategory: string | null = null;
 
-  constructor(private storeService: StoreService) { }
+  constructor(private storeService: StoreService, private authService: AuthService) { } // Inject AuthService
 
   ngOnInit() {
     this.storeService.getStores().subscribe(data => {
       this.stores = data.stores;
       if (this.stores.length > 0) {
-        this.selectStore(this.stores[0]); // ilk mağazanı seçirik
+        this.selectStore(this.stores[0]);
       }
     });
   }
@@ -37,7 +38,7 @@ export class ProductsComponent implements OnInit {
 
   selectStore(store: Store) {
     this.selectedStore = store;
-    this.selectedCategory = null; // Kateqoriya seçimlərini sıfırlamaq
+    this.selectedCategory = null;
     this.filteredProducts = store.products;
     this.extractCategories();
   }
@@ -50,21 +51,26 @@ export class ProductsComponent implements OnInit {
   }
 
   addToCart(product: Product): void {
+    if (!this.authService.isLoggedIn()) {
+      alert('Please log in first to add items to the cart.');
+      return;
+    }
+
     let cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
     
-    // Məhsulu tap
+    // Find the product in the cart
     const existingProduct = cartProducts.find((p: Product) => p.id === product.id);
     
     if (existingProduct) {
-      // Məhsul varsa, miqdarı artır
+      // If the product exists, increase the quantity
       existingProduct.quantity = (existingProduct.quantity || 1) + 1;
     } else {
-      // Məhsul yoxdursa, miqdarını təyin et və əlavə et
+      // If the product does not exist, set quantity to 1 and add to cart
       product.quantity = 1;
       cartProducts.push(product);
     }
     
-    // Yenidən localStorage-a yaz
+    // Update localStorage
     localStorage.setItem('cart', JSON.stringify(cartProducts));
     alert(`${product.productName} added to cart.`);
   }
