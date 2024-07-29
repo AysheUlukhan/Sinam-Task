@@ -18,17 +18,17 @@ export class RegisterComponent {
 
   register(): void {
     if (this.password !== this.confirmPassword) {
-      this.error = 'Passwords do not match.';
+      this.error = 'Parollar uyğun gəlmir.';
       return;
     }
 
     if (this.authService.register(this.username, this.password)) {
-      this.success = 'Registration successful! You can now log in.';
+      this.success = 'Qeydiyyat uğurlu oldu! İndi daxil ola bilərsiniz.';
       setTimeout(() => {
         this.router.navigate(['/login']);
-      }, 1000); // Redirect after 2 seconds
+      }, 1000);
     } else {
-      this.error = 'Username already exists.';
+      this.error = 'İstifadəçi adı artıq mövcuddur.';
     }
   }
 }

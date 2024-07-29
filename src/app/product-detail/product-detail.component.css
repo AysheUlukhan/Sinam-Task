@@ -2,8 +2,26 @@
     margin-top: 200px;
 }
 
-.product-detail table tr th{
-    background-color: #030349;
+.product-detail table tr{
+    background: rgb(219, 85, 24);
+    background: linear-gradient(278deg, rgba(219, 85, 24, 1) 0%, rgba(213, 113, 13, 1) 35%, rgba(255, 145, 0, 1) 100%);
     color: white;
-    font-weight: 400;
+    height: 50px;
+}
+
+.product-detail table tr th{
+    font-weight: 500;
+}
+.product-detail tr th{
+    padding-left: 10px;
+}
+
+.product-detail tr th:first-child{
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.product-detail tr th:last-child{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

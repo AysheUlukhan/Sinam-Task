@@ -12,7 +12,7 @@ export class LoginComponent {
   password: string; 
   error: string;
 
-  constructor(public authService: AuthService, private router: Router) { // authService public
+  constructor(public authService: AuthService, private router: Router) {
     this.username = '';
     this.password = ''; 
     this.error = '';
@@ -26,7 +26,7 @@ export class LoginComponent {
         this.router.navigate(['/home']);
       }
     } else {
-      this.error = 'Username or password is incorrect.';
+      this.error = 'İstifadəçi adı və ya parol səhvdir.';
     }
   }
 

@@ -1,3 +1,47 @@
 .register{
+    display: flex;
+
+}
+.register .left{
+    background: rgb(219,85,24);
+    background: linear-gradient(278deg, rgba(219,85,24,1) 0%, rgba(213,113,13,1) 35%, rgba(255,145,0,1) 100%);
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.register .left a{
+    border: 1px solid white;
+    color: white;
+    padding: 7px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.register .right{
     margin-top: 200px;
+    width: 60%;
+}
+
+.register .right button{
+    background: rgb(219,85,24);
+    background: linear-gradient(278deg, rgba(219,85,24,1) 0%, rgba(213,113,13,1) 35%, rgba(255,145,0,1) 100%);
+    border: none;
+}
+
+.register .right form label{
+    font-size: 15px;
+}
+
+.register .form-group input{
+    outline: none;
+}
+
+.register .form-group input:focus{
+    outline: none;
+    box-shadow: none;
 }

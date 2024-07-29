@@ -6,6 +6,7 @@ export interface Product {
   img: string;
   storeId: number; 
   quantity?: number;
+  kq?: boolean;
 }
 
 export interface Store {

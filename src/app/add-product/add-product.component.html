@@ -1,38 +1,37 @@
 <div class="container add-product">
-    <h2>Add New Product</h2>
-    <form (ngSubmit)="addProduct()">
-      <div class="form-group">
-        <label for="store">Store</label>
-        <select id="store" class="form-control" [(ngModel)]="selectedStoreId" name="store" required>
-          <option *ngFor="let store of stores" [value]="store.id">{{ store.storeName }}</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="productName">Product Name</label>
-        <input type="text" id="productName" class="form-control" [(ngModel)]="product.productName" name="productName" required>
-      </div>
-      <div class="form-group">
-        <label for="price">Price</label>
-        <input type="number" id="price" class="form-control" [(ngModel)]="product.price" name="price" required>
-      </div>
-      <div class="form-group">
-        <label for="img">Image URL</label>
-        <input type="text" id="img" class="form-control" [(ngModel)]="product.img" name="img" required>
-      </div>
-      <div class="form-group">
-        <label for="category">Category</label>
-        <!-- <select id="category" class="form-control" [(ngModel)]="product.category" name="category" required>
-          <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
-        </select> -->
-
-        <select id="category" class="form-control"  [(ngModel)]="product.category" name="category" required>
+  <h4 class="mb-4 text-center">Yeni məhsul əlavə et</h4>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="col-lg-8">
+      <form (ngSubmit)="addProduct()">
+        <div class="form-group">
+          <label for="store">Mağazanı seç</label>
+          <select id="store" class="form-control" [(ngModel)]="selectedStoreId" name="store" required>
+            <option *ngFor="let store of stores" [value]="store.id">{{ store.storeName }}</option>
+          </select>
+        </div>
+        <div class="form-group mt-3">
+          <label for="productName">Məhsulun adı</label>
+          <input type="text" id="productName" class="form-control" [(ngModel)]="product.productName" name="productName" required>
+        </div>
+        <div class="form-group mt-3">
+          <label for="price">Qiyməti</label>
+          <input type="number" id="price" class="form-control" [(ngModel)]="product.price" name="price" required>
+        </div>
+        <div class="form-group mt-3">
+          <label for="img">Şəkil URL</label>
+          <input type="text" id="img" class="form-control" [(ngModel)]="product.img" name="img" required>
+        </div>
+        <div class="form-group mt-3">
+          <label for="category">Kateqoriyanı seç</label>
+          <select id="category" class="form-control" [(ngModel)]="product.category" name="category" required>
             <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
           </select>
-      </div>
-      <div *ngIf="error" class="alert alert-danger mt-2">
-        {{ error }}
-      </div>
-      <button type="submit" class="btn btn-primary">Add Product</button>
-    </form>
+        </div>
+        <div *ngIf="error" class="alert alert-danger mt-2">
+          {{ error }}
+        </div>
+        <button type="submit" class="btn-add mt-3">Məhsul əlavə et</button>
+      </form>
+    </div>
   </div>
-  
+</div>

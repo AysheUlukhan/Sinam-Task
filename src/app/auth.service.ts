@@ -21,7 +21,7 @@ export class AuthService {
       }
     } catch (e) {
       console.error('Error loading user from localStorage:', e);
-      this.logout(); // If error occurs, ensure to logout
+      this.logout();
     }
   }
 

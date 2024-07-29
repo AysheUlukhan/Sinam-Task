@@ -17,7 +17,7 @@ import { EditProductComponent } from './edit-product/edit-product.component';
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import { AddProductComponent } from './add-product/add-product.component';
-import { CartComponent } from './cart/cart.component'
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,7 @@ import { CartComponent } from './cart/cart.component'
     ProductsComponent,
     RegisterComponent,
     AddProductComponent,
-    CartComponent
+    CartComponent,
   ],
   imports: [
     BrowserModule,

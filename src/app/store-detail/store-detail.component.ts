@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { StoreService } from '../store.service';
 import { Product, Store } from '../store.model';
-import { AuthService } from '../auth.service'; // Import AuthService
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-store-detail',
@@ -19,7 +19,7 @@ export class StoreDetailComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private storeService: StoreService,
-    private authService: AuthService // Inject AuthService
+    private authService: AuthService
   ) { }
 
   ngOnInit(): void {
@@ -55,7 +55,7 @@ export class StoreDetailComponent implements OnInit {
 
   addToCart(product: Product): void {
     if (!this.authService.isLoggedIn()) {
-      alert('Please log in first to add items to the cart.');
+      alert('Əvvəlcə login olun.');
       return;
     }
 
@@ -63,16 +63,13 @@ export class StoreDetailComponent implements OnInit {
     const existingProduct = cart.find((p: Product) => p.id === product.id);
 
     if (existingProduct) {
-      // If the product exists, increase the quantity
       existingProduct.quantity = (existingProduct.quantity || 1) + 1;
     } else {
-      // If the product does not exist, set quantity to 1 and add to cart
       product.quantity = 1;
       cart.push(product);
     }
 
-    // Update localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${product.productName} added to cart.`);
+    alert(`${product.productName} səbətə əlavə olundu.`);
   }
 }

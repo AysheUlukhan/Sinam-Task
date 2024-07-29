@@ -1,19 +1,23 @@
 <div class="container edit-product">
-    <h2 class="text-center">Edit Product</h2>
-    <form *ngIf="product" (ngSubmit)="saveProduct()">
-      <div class="mb-3">
-        <label for="productName" class="form-label">Product Name</label>
-        <input type="text" class="form-control" id="productName" [(ngModel)]="product.productName" name="productName" required>
-      </div>
-      <div class="mb-3">
-        <label for="productPrice" class="form-label">Price</label>
-        <input type="number" class="form-control" id="productPrice" [(ngModel)]="product.price" name="price" required>
-      </div>
-      <div class="mb-3">
-        <label for="productImage" class="form-label">Image URL</label>
-        <input type="text" class="form-control" id="productImage" [(ngModel)]="product.img" name="img" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Save</button>
-    </form>
+    <h2 class="text-center">Məhsulu yenilə</h2>
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="col-lg-8">
+          <form *ngIf="product" (ngSubmit)="saveProduct()">
+            <div class="mb-3">
+              <label for="productName" class="form-label">Məhsulun adı</label>
+              <input type="text" class="form-control" id="productName" [(ngModel)]="product.productName" name="productName" required>
+            </div>
+            <div class="mb-3">
+              <label for="productPrice" class="form-label">Qiyməti</label>
+              <input type="number" class="form-control" id="productPrice" [(ngModel)]="product.price" name="price" required>
+            </div>
+            <div class="mb-3">
+              <label for="productImage" class="form-label">Şəkil URL</label>
+              <input type="text" class="form-control" id="productImage" [(ngModel)]="product.img" name="img" required>
+            </div>
+            <button type="submit" class="btn-save">Yadda saxla</button>
+          </form>
+        </div>
+    </div>
   </div>
   

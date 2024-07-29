@@ -1,62 +1,29 @@
-<!-- <div class="container margin_top_shop">
- <div class="d-flex justify-content-between mb-4">
-  <h2 class="text-center">Dashboard</h2>
- </div> 
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">Mağaza adı</th>
-        <th scope="col">Şəkil</th>
-        <th scope="col">Məhsulun adı</th>
-        <th scope="col">Qiymət</th>
-        <th scope="col">Edit</th>
-        <th scope="col">Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of products; let i = index">
-        <th scope="row">{{ i + 1 }}</th>
-        <td>{{ getStoreName(item.storeId) }}</td>
-        <td><img [src]="item.product.img" alt="{{ item.product.productName }}" height="50"></td>
-        <td>{{ item.product.productName }}</td>
-        <td>{{ item.product.price }} ₼</td>
-        <td>
-          <button class="btn btn-warning" (click)="editProduct(item.storeId, item.product.id)">Edit</button>
-        </td>
-        <td>
-          <button class="btn btn-dark" (click)="deleteProduct(item.storeId, item.product.id)">Delete</button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div> -->
-
-
-<!-- dashboard.component.html -->
-<div class="container margin_top_shop">
-  <div class="d-flex justify-content-between mb-4">
-    <h2 class="text-center">Dashboard</h2>
-    <button (click)="navigateToAddProduct()" class="btn btn-primary">Add Product</button>
-
+<div class="container dashboard ">
+  <div class="mb-4">
+    <h2 class="text-center">İdarə paneli</h2>
   </div>
-  
-  <!-- List of stores -->
+
   <div *ngIf="!selectedStoreId">
-    <h3>Stores</h3>
-    <ul class="list-group">
-      <li class="list-group-item" *ngFor="let store of stores">
-        <a (click)="viewProducts(store.id)">{{ store.storeName }}</a>
-      </li>
-    </ul>
+    <h5>Mağazalar</h5>
+    <div class="row stores">
+      <div class="col-lg-4" *ngFor="let store of stores">
+        <div class="card mb-3">
+          <img class="card-img-top" [src]="store.img" alt="{{ store.storeName }}">
+          <div class="card-body">
+            <a class="card-title" (click)="viewProducts(store.id)">{{ store.storeName }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- Products for selected store -->
   <div *ngIf="selectedStoreId">
-    <h3>Products for Store: {{ getStoreName(selectedStoreId) }}</h3>
-    <button (click)="selectedStoreId = null" class="btn btn-secondary mb-3">Back to Stores</button>
+    <h5>Mağaza üçün məhsullar: {{ getStoreName(selectedStoreId) }}</h5>
+    <div class="d-flex justify-content-between align-items-center my-4">
+      <button (click)="selectedStoreId = null" class="btn-back">Mağazalara qayıt</button>
+      <button (click)="navigateToAddProduct()" class="btn-add">Məhsul əlavə et</button>
+    </div>
     <table class="table">
-      <thead>
         <tr>
           <th scope="col">#</th>
           <th scope="col">Mağaza adı</th>
@@ -66,7 +33,6 @@
           <th scope="col">Edit</th>
           <th scope="col">Delete</th>
         </tr>
-      </thead>
       <tbody>
         <tr *ngFor="let item of products; let i = index">
           <th scope="row">{{ i + 1 }}</th>
@@ -75,10 +41,10 @@
           <td>{{ item.product.productName }}</td>
           <td>{{ item.product.price }} ₼</td>
           <td>
-            <button class="btn btn-warning" (click)="editProduct(item.storeId, item.product.id)">Edit</button>
+            <i (click)="editProduct(item.storeId, item.product.id)" class="fas fa-edit"></i>
           </td>
           <td>
-            <button class="btn btn-dark" (click)="deleteProduct(item.storeId, item.product.id)">Delete</button>
+            <i class="fas fa-trash" (click)="deleteProduct(item.storeId, item.product.id)"></i>
           </td>
         </tr>
       </tbody>

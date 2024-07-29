@@ -1,46 +1,72 @@
-.store-detail input{
+.store-detail input {
     width: 100%;
     border-radius: 5px;
     outline: none;
     border: none;
     padding-left: 10px;
 }
+
 .list-group-item.active {
-    background-color: #F0F0F0;
-    color: black;
-    border-color: #F0F0F0;
-  }
-  
-.store-detail input::placeholder{
+    /* background-color: #F0F0F0; */
+    background: rgb(219, 85, 24);
+    background: linear-gradient(278deg, rgba(219, 85, 24, 1) 0%, rgba(213, 113, 13, 1) 35%, rgba(255, 145, 0, 1) 100%);
+    color: white;
+    border-color: #FD9001;
+}
+
+.store-detail input::placeholder {
     font-size: 14px;
 }
 
-.store-detail .search-wrapper{
+.store-detail .search-wrapper {
     display: flex;
     border-radius: 5px;
     border: 1px solid #DEE2E6;
 
 }
 
-.store-detail .search-wrapper button{
+.store-detail .search-wrapper button {
     border: none;
     font-size: 14px;
     border-radius: 3px;
     padding: 10px;
+    background: rgb(219, 85, 24);
+    background: linear-gradient(278deg, rgba(219, 85, 24, 1) 0%, rgba(213, 113, 13, 1) 35%, rgba(255, 145, 0, 1) 100%);
+    color: white;
 }
 
-.store-detail ul li{
+.store-detail ul li {
     cursor: pointer;
 }
 
-.store-detail ul li:hover{
-    background-color: #F0F0F0;
+.store-detail ul li:hover {
+    /* background-color: #F0F0F0; */
+    color: white;
+    background: rgb(219, 85, 24);
+    background: linear-gradient(278deg, rgba(219, 85, 24, 1) 0%, rgba(213, 113, 13, 1) 35%, rgba(255, 145, 0, 1) 100%);
 }
 
-.store-detail .card-body p{
+.store-detail .card-body p {
     font-size: 14px;
 }
+
 /* menim yazdigim kod */
-.margin_top_shop{
+.margin_top_shop {
     margin-top: 200px;
+}
+
+.store-detail .card-body .btn-add {
+    border: none;
+    background: rgb(219, 85, 24);
+    background: linear-gradient(278deg, rgba(219, 85, 24, 1) 0%, rgba(213, 113, 13, 1) 35%, rgba(255, 145, 0, 1) 100%);
+    color: white;
+    font-size: 14px;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+.store-detail .card{
+    /* border-color: #DB5518; */
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: none;
 }

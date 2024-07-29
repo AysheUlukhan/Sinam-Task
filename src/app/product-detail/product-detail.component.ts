@@ -21,7 +21,6 @@ export class ProductDetailComponent implements OnInit {
         store.products.forEach((product: Product) => {
           if (product.id.toString() === productId) {
             this.product = product;
-            // Bu nöqtədə yalnız ilk uyğun məhsul tapıldıqda məhsul adını təyin edirik
             this.productPrices.push({ storeName: store.storeName, price: product.price });
           } else if (product.productName === this.product?.productName) {
             this.productPrices.push({ storeName: store.storeName, price: product.price });

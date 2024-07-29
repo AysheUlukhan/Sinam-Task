@@ -12,7 +12,7 @@ export class AddProductComponent implements OnInit {
   stores: Store[] = [];
   categories: string[] = [];
   selectedStoreId: number | null = null;
-  product: Product = { id: 0, productName: '', price: 0, img: '', category: '', storeId: 0 };  // Initialize with all required properties
+  product: Product = { id: 0, productName: '', price: 0, img: '', category: '', storeId: 0 };
   error: string = '';
 
   constructor(
@@ -45,13 +45,14 @@ export class AddProductComponent implements OnInit {
 
     this.product.storeId = this.selectedStoreId;
 
-    // Yeni məhsulu localStorage-a əlavə et
     let products = JSON.parse(localStorage.getItem('products') || '[]');
-    this.product.id = products.length ? Math.max(products.map((p: Product) => p.id)) + 1 : 1; // Yeni məhsula unikal ID ver
+    this.product.id = products.length ? Math.max(...products.map((p: Product) => p.id)) + 1 : 1;
+
     products.push(this.product);
     localStorage.setItem('products', JSON.stringify(products));
 
-    // DashboardComponent-ə yönləndir
+    alert('Məhsul uğurla əlavə olundu!');
+    
     this.router.navigate(['/dashboard']);
   }
 }

@@ -1,4 +1,3 @@
-// store.component.ts
 import { Component, OnInit } from '@angular/core';
 import { StoreService } from '../store.service';
 

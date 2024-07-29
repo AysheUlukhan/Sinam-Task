@@ -90,7 +90,7 @@ export class StoreService {
       this.getStores().subscribe(() => {
         const store = this.stores.find((store: Store) => store.id === storeId);
         if (store) {
-          newProduct.id = Math.max(...store.products.map(p => p.id), 0) + 1; // Generate new ID
+          newProduct.id = Math.max(...store.products.map(p => p.id), 0) + 1;
           store.products.push(newProduct);
         }
         observer.next();

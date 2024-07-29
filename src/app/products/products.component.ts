@@ -15,7 +15,7 @@ export class ProductsComponent implements OnInit {
   filteredProducts: Product[] = [];
   selectedCategory: string | null = null;
 
-  constructor(private storeService: StoreService, private authService: AuthService) { } // Inject AuthService
+  constructor(private storeService: StoreService, private authService: AuthService) { } 
 
   ngOnInit() {
     this.storeService.getStores().subscribe(data => {
@@ -52,26 +52,22 @@ export class ProductsComponent implements OnInit {
 
   addToCart(product: Product): void {
     if (!this.authService.isLoggedIn()) {
-      alert('Please log in first to add items to the cart.');
+      alert('Əvvəlcə login olun.');
       return;
     }
 
     let cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
     
-    // Find the product in the cart
     const existingProduct = cartProducts.find((p: Product) => p.id === product.id);
     
     if (existingProduct) {
-      // If the product exists, increase the quantity
       existingProduct.quantity = (existingProduct.quantity || 1) + 1;
     } else {
-      // If the product does not exist, set quantity to 1 and add to cart
       product.quantity = 1;
       cartProducts.push(product);
     }
     
-    // Update localStorage
     localStorage.setItem('cart', JSON.stringify(cartProducts));
-    alert(`${product.productName} added to cart.`);
+    alert(`${product.productName} səbətə əlavə olundu.`);
   }
 }

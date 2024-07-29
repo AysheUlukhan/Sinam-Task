@@ -8,7 +8,7 @@ import { Product } from '../store.model';
 })
 export class CartComponent implements OnInit {
   cartProducts: Product[] = [];
-  totalPrice: number = 0; // Variable to hold total price
+  totalPrice: number = 0; 
 
   ngOnInit(): void {
     this.loadCartProducts();
@@ -18,10 +18,10 @@ export class CartComponent implements OnInit {
     this.cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
     this.cartProducts.forEach((product: Product) => {
       if (product.quantity === undefined) {
-        product.quantity = 1; // If quantity is not defined, set it to 1
+        product.quantity = 1;
       }
     });
-    this.calculateTotalPrice(); // Calculate total price initially
+    this.calculateTotalPrice();
   }
 
   deleteProduct(productToDelete: Product): void {
@@ -29,7 +29,7 @@ export class CartComponent implements OnInit {
     cartProducts = cartProducts.filter((product: Product) => product.id !== productToDelete.id);
     localStorage.setItem('cart', JSON.stringify(cartProducts));
     this.cartProducts = cartProducts;
-    this.calculateTotalPrice(); // Recalculate total price after deletion
+    this.calculateTotalPrice();
   }
 
   changeQuantity(product: Product, change: number): void {
@@ -40,11 +40,27 @@ export class CartComponent implements OnInit {
       const currentQuantity = cartProducts[productIndex].quantity || 1;
       const newQuantity = currentQuantity + change;
 
-      if (newQuantity > 0) { // Quantity should not be negative
+      if (newQuantity > 0) {
         cartProducts[productIndex].quantity = newQuantity;
         localStorage.setItem('cart', JSON.stringify(cartProducts));
         this.cartProducts = cartProducts;
-        this.calculateTotalPrice(); // Recalculate total price after changing quantity
+        this.calculateTotalPrice();
+      }
+    }
+  }
+
+  updateQuantity(product: Product): void {
+    let cartProducts = JSON.parse(localStorage.getItem('cart') || '[]');
+    const productIndex = cartProducts.findIndex((p: Product) => p.id === product.id);
+
+    if (productIndex > -1) {
+      const newQuantity = product.quantity;
+
+      if (newQuantity !== undefined && newQuantity > 0) {
+        cartProducts[productIndex].quantity = newQuantity;
+        localStorage.setItem('cart', JSON.stringify(cartProducts));
+        this.cartProducts = cartProducts;
+        this.calculateTotalPrice();
       }
     }
   }

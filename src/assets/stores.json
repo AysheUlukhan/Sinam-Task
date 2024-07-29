@@ -10,21 +10,24 @@
           "productName": "Ananas",
           "category": "Meyvə",
           "price": 5.99,
-          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075"
+          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075",
+          "kq":true
         },
         {
           "id": 2,
           "productName": "Qarpız",
           "category": "Meyvə",
           "price": 0.49,
-          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752"
+          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752",
+          "kq":true
         },
         {
           "id": 3,
           "productName": "Yemiş",
           "category": "Meyvə",
           "price": 1.29,
-          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503"
+          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503",
+          "kq":true
         },
         {
           "id": 4,
@@ -80,7 +83,8 @@
           "productName": "Sun Bakery Türk Paxlavası Şokoladı KQ",
           "category": "Tort, Bişmələr, Çörək",
           "price": 16.50,
-          "img": "https://bazarstore.az/cdn/shop/products/30181883_1000x1000.jpg?v=1693359667"
+          "img": "https://bazarstore.az/cdn/shop/products/30181883_1000x1000.jpg?v=1693359667",
+          "kq":true
         },
         {
           "id": 11,
@@ -116,21 +120,24 @@
           "productName": "Ananas",
           "category": "Meyvə",
           "price": 6.15,
-          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075"
+          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075",
+          "kq":true
         },
         {
           "id": 14,
           "productName": "Qarpız",
           "category": "Meyvə",
           "price": 0.25,
-          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752"
+          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752",
+          "kq":true
         },
         {
           "id": 15,
           "productName": "Yemiş",
           "category": "Meyvə",
           "price": 0.99,
-          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503"
+          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503",
+          "kq":true
         },
         {
           "id": 16,
@@ -221,21 +228,24 @@
           "productName": "Ananas",
           "category": "Meyvə",
           "price": 4.45,
-          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075"
+          "img": "https://bazarstore.az/cdn/shop/products/30015546_1000x1000.jpg?v=1693554075",
+          "kq":true
         },
         {
           "id": 28,
           "productName": "Qarpız",
           "category": "Meyvə",
           "price": 0.35,
-          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752"
+          "img": "https://bazarstore.az/cdn/shop/products/30036052_1000x1000.jpg?v=1693738752",
+          "kq":true
         },
         {
           "id": 29,
           "productName": "Yemiş",
           "category": "Meyvə",
           "price": 0.85,
-          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503"
+          "img": "https://bazarstore.az/cdn/shop/files/5415e57d014f9fbceccf7a2b2495e65f_1000x1000.webp?v=1718436503",
+          "kq":true
         },
         {
           "id": 30,

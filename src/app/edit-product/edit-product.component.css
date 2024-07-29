@@ -1,3 +1,13 @@
 .edit-product{
     padding-top: 150px;
 }
+
+.edit-product .btn-save{
+    background: rgb(219, 85, 24);
+    background: linear-gradient(278deg, rgba(219, 85, 24, 1) 0%, rgba(213, 113, 13, 1) 35%, rgba(255, 145, 0, 1) 100%);
+    border: none;
+    color: white;
+    font-size: 14px;
+    padding: 6px 20px;
+    border-radius: 6px;
+}

@@ -1,21 +1,32 @@
-<div class="container register">
-    <h2>Register</h2>
-    <form (ngSubmit)="register()">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+<div class="register">
+  <div class="left">
+    <h3>İndi daxil ol!</h3>
+    <a href="/login">Daxil ol</a>
+  </div>
+  <div class="right">
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="col-lg-8">
+        <h2 class="text-center mb-5">Qeydiyyatdan keç</h2>
+        <form (ngSubmit)="register()">
+          <div class="form-group">
+            <label for="username">İstifadəçi adı</label>
+            <input type="text" id="username" [(ngModel)]="username" name="username" class="form-control" required>
+          </div>
+          <div class="form-group mt-3">
+            <label for="password">Şifrə</label>
+            <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
+          </div>
+          <div class="form-group mt-3">
+            <label for="confirmPassword">Şifrəni təsdiqdə</label>
+            <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword"
+              class="form-control" required>
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Qeydiyyatdan keç</button>
+        </form>
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" [(ngModel)]="password" name="password" class="form-control" required>
-      </div>
-      <div class="form-group">
-        <label for="confirmPassword">Confirm Password</label>
-        <input type="password" id="confirmPassword" [(ngModel)]="confirmPassword" name="confirmPassword" class="form-control" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Register</button>
-    </form>
+    </div>
     <p *ngIf="error" class="text-danger">{{ error }}</p>
     <p *ngIf="success" class="text-success">{{ success }}</p>
   </div>
-  
+
+</div>
